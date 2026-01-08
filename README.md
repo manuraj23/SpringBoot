@@ -1,2 +1,2 @@
-# Daily-practice
-Daily work is updated in the respective branches
+# Spring Boot with Postgres
+Demo Project of Spring Boot with Postgres
