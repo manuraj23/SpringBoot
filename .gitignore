@@ -1,0 +1,9 @@
+src/main/resources/application-*.properties
+# ignore only profile-specific files (keeps application.properties)
+#src/main/resources/application-*.properties
+
+# ignore both base and profile files
+src/main/resources/application*.properties
+
+# ignore all .properties in resources
+src/main/resources/*.properties
