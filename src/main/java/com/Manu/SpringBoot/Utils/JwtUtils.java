@@ -1,10 +1,10 @@
 package com.Manu.SpringBoot.Utils;
 
-
-import org.springframework.stereotype.Component;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
+import org.springframework.stereotype.Component;
+
 import javax.crypto.SecretKey;
 import java.util.Date;
 import java.util.HashMap;
@@ -49,10 +49,10 @@ public class JwtUtils {
         return Jwts.builder()
                 .claims(claims)
                 .subject(subject)
-                .header().empty().add("typ","JWT")
+                .header().empty().add("typ", "JWT")
                 .and()
                 .issuedAt(new Date(System.currentTimeMillis()))
-                .expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 10 * 6) ) // 60 minutes expiration time
+                .expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 10)) // 60 minutes expiration time
                 .signWith(getSigningKey())
                 .compact();
     }
